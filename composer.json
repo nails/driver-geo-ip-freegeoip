@@ -1,0 +1,47 @@
+{
+    "name": "nailsapp/driver-geo-ip-freegeoip",
+    "keywords": ["Nails", "Shed Collective", "CodeIgniter", "GeoIP Module", "Driver", "FreeGeoIp"],
+    "homepage": "http://nailsapp.co.uk/modules/geo-ip/driver/freegeoip",
+    "description": "This is the \"FreeGeoIp\" driver for the Nails GeoIP module.",
+    "license": "MIT",
+    "authors":
+    [
+        {
+            "name": "Pablo de la Pena",
+            "email": "p@nailsapp.co.uk",
+            "homepage": "http://nailsapp.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "support":
+    {
+        "email": "hello@nailsapp.co.uk"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require":
+    {
+        "nailsapp/module-geo-ip": "dev-develop"
+    },
+    "require-dev":
+    {
+        "phpunit/phpunit": "4.*"
+    },
+    "extra":
+    {
+        "nails" :
+        {
+            "name": "FreeGeoIp",
+            "type": "driver",
+            "forModule": "nailsapp/module-geo-ip",
+            "data": {
+                "namespace": "Nails\\GeoIp\\Driver\\",
+                "class": "FreeGeoIp"
+            }
+        }
+    },
+    "autoload":
+    {
+        "psr-4": {"Nails\\GeoIp\\Driver\\": "src/"}
+    }
+}
