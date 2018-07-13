@@ -24,9 +24,23 @@ class FreeGeoIp implements Driver
     // --------------------------------------------------------------------------
 
     /**
+     * FreeGeoIp constructor.
+     */
+    public function __construct()
+    {
+        trigger_error(
+            'The ' . __CLASS__ . ' class is deprecated, use nailsapp/driver-geo-ip-ipstack driver instead.',
+            E_USER_DEPRECATED
+        );
+    }
+
+    // --------------------------------------------------------------------------
+
+    /**
      * @param string $sIp The IP address to look up
      *
      * @return \Nails\GeoIp\Result\Ip
+     * @deprecated
      */
     public function lookup($sIp)
     {
